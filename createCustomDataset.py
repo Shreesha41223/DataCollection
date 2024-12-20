@@ -8,7 +8,7 @@ from get_CAT import generate_code_aligned_type_sequence
 
 # Firebase Initialization
 if not firebase_admin._apps:
-    firebase_creds = json.loads(st.secrets["firebase"])
+    firebase_creds = st.secrets["firebase"]
     cred = credentials.Certificate(firebase_creds)  # Path to your private key
     firebase_admin.initialize_app(cred)
 
